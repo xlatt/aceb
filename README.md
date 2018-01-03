@@ -32,3 +32,7 @@ Files are archived with tar and compressed with lzma.
 * tar
 * lzma
 * rsync
+
+## TODO
+
+1) Add function for creating journal when it is not present at the beggining of backup cycle.
