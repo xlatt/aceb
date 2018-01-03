@@ -9,7 +9,9 @@ folders=(/etc /var)
 # Files contanining passwords that are used during backup process.
 enc_pass=""
 disk_pass=""
+db_pass=""
 back_jrn=""
+
 
 # Location where backup will be stored
 disk_location=""
@@ -26,7 +28,7 @@ function log() {
 
 
 function dump_mysql() {
-	dbpwd=$(cat /root/.dbpwd)
+	dbpwd=$(cat "$db_pass")
 	mysqldump --opt -usefino -p$dbpwd --all-databases > /root/db.sql
 	
 	if [ $? -ne 0 ]; then
