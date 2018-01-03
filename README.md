@@ -15,7 +15,7 @@ to keep track of back up phases.
 
 Journal contains only one record and that is.:
 
-[NBP]:[LBPD]
+\[NBP\]:\[LBPD\]
 
 * NBP  - Next Back up Phase
 
