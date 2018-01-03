@@ -28,8 +28,8 @@ function log() {
 
 
 function dump_mysql() {
-	dbpwd=$(cat "$db_pass")
-	mysqldump --opt -usefino -p$dbpwd --all-databases > /root/db.sql
+
+	mysqldump --opt -usefino -p --all-databases < "$db_pass" > /root/db.sql
 	
 	if [ $? -ne 0 ]; then
 		log "Failed to create DB dump. Error: $?" "critical"
